@@ -4,8 +4,8 @@ import { Code2, Terminal, Laptop } from 'lucide-react';
 const ProjectsPage = () => {
   const projects = [
     { 
-      title: 'CoffeHouse Website', 
-      tech: ['React', 'Node.js', 'SQL'],
+      title: 'CoffeeHouse Website', 
+      tech: ['React', 'Node.js', 'SQL', 'Python'],
       description: 'Full-stack shopping platform with real-time inventory management and secure payment processing',
       icon: Laptop,
       link: "https://coffeehouse-seven.vercel.app/"
