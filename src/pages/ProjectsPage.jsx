@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code2, Terminal, Laptop, Link } from 'lucide-react';
+import { Code2, Terminal, Laptop } from 'lucide-react';
 
 const ProjectsPage = () => {
   const projects = [
@@ -8,25 +8,28 @@ const ProjectsPage = () => {
       tech: ['React', 'Node.js', 'SQL'],
       description: 'Full-stack shopping platform with real-time inventory management and secure payment processing',
       icon: Laptop,
-      Link:"https://coffeehouse-seven.vercel.app/"
+      link: "https://coffeehouse-seven.vercel.app/"
     },
     { 
       title: 'Task Management App', 
       tech: ['React', 'Firebase', 'Tailwind'],
       description: 'Collaborative task tracker with team features, real-time updates, and intuitive UI',
-      icon: Terminal
+      icon: Terminal,
+      link: "https://your-task-app-link.com"
     },
     { 
       title: 'Weather Dashboard', 
       tech: ['React', 'API', 'Charts.js'],
       description: 'Real-time weather data visualization with beautiful charts and forecasts',
-      icon: Code2
+      icon: Code2,
+      link: "https://your-weather-dashboard.com"
     },
     { 
       title: 'Portfolio Generator', 
       tech: ['React', 'Three.js', 'AI'],
       description: 'AI-powered portfolio builder that creates stunning developer portfolios',
-      icon: Laptop
+      icon: Laptop,
+      link: "https://your-portfolio-generator.com"
     }
   ];
 
@@ -70,9 +73,17 @@ const ProjectsPage = () => {
                 ))}
               </div>
               
-              <button className="w-full py-2.5 sm:py-3 bg-amber-400 text-white rounded-full font-semibold hover:bg-amber-500 transition-all duration-300 shadow-md hover:shadow-lg text-sm sm:text-base">
+              {/* Corrected: working link button */}
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full py-2.5 sm:py-3 bg-amber-400 text-white rounded-full font-semibold 
+                           hover:bg-amber-500 transition-all duration-300 shadow-md hover:shadow-lg 
+                           text-sm sm:text-base text-center"
+              >
                 View Project →
-              </button>
+              </a>
             </div>
           ))}
         </div>
