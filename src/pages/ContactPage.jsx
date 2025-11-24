@@ -75,7 +75,7 @@ const ContactPage = () => {
           <div className="text-center bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg">
             <Mail className="mx-auto mb-2 text-amber-500" size={24} />
             <p className="text-gray-600 mb-1 font-medium text-xs sm:text-sm">Email</p>
-            <p className="text-gray-800 font-semibold text-xs sm:text-base break-all">dev@example.com</p>
+            <p className="text-gray-800 font-semibold text-xs sm:text-base break-all">priyankatalari16@gmail.com</p>
           </div>
           <div className="text-center bg-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg">
             <svg viewBox="0 0 60 40" className="w-10 h-7 sm:w-12 sm:h-8 mx-auto mb-2">
@@ -84,7 +84,7 @@ const ContactPage = () => {
               <path d="M 10 20 L 0 12 L 5 20 L 0 28 Z" fill="#F4D03F"/>
             </svg>
             <p className="text-gray-600 mb-1 font-medium text-xs sm:text-sm">Location</p>
-            <p className="text-gray-800 font-semibold text-xs sm:text-base">Sky City ☁️</p>
+            <p className="text-gray-800 font-semibold text-xs sm:text-base"> Mumbai☁️</p>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const ProjectsPage = () => {
       description: 'Full-stack shopping platform with real-time inventory management and secure payment processing',
       icon: Laptop,
       link: "https://coffeehouse-seven.vercel.app/"
-    },
+    }/*,
     { 
       title: 'Task Management App', 
       tech: ['React', 'Firebase', 'Tailwind'],
@@ -30,7 +30,7 @@ const ProjectsPage = () => {
       description: 'AI-powered portfolio builder that creates stunning developer portfolios',
       icon: Laptop,
       link: "https://your-portfolio-generator.com"
-    }
+    }*/
   ];
 
   return (
