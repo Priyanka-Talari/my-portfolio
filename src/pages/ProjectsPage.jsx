@@ -1,13 +1,14 @@
 import React from 'react';
-import { Code2, Terminal, Laptop } from 'lucide-react';
+import { Code2, Terminal, Laptop, Link } from 'lucide-react';
 
 const ProjectsPage = () => {
   const projects = [
     { 
-      title: 'E-Commerce Platform', 
-      tech: ['React', 'Node.js', 'MongoDB'],
+      title: 'CoffeHouse Website', 
+      tech: ['React', 'Node.js', 'SQL'],
       description: 'Full-stack shopping platform with real-time inventory management and secure payment processing',
-      icon: Laptop
+      icon: Laptop,
+      Link:"https://coffeehouse-seven.vercel.app/"
     },
     { 
       title: 'Task Management App', 
