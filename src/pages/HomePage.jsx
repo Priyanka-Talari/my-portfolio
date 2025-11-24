@@ -25,7 +25,7 @@ const HomePage = () => {
     { 
       Icon: Github, 
       label: 'GitHub', 
-      url: 'https://github.com/yourusername' 
+      url: 'https://github.com/Priyanka-Talari' 
     },
     { 
       Icon: Linkedin, 
@@ -35,7 +35,7 @@ const HomePage = () => {
     { 
       Icon: Mail, 
       label: 'Email', 
-      url: 'mailto:your.email@example.com' 
+      url: 'mailto:priyankatalari16@gmail.com' 
     }
   ];
 
