@@ -3,7 +3,6 @@ import { Github, Linkedin, Mail } from 'lucide-react';
 
 const HomePage = () => {
   const [currentTitle, setCurrentTitle] = useState(0);
-
   const titles = [
     'Full Stack Developer',
     'Python Developer',
@@ -22,13 +21,30 @@ const HomePage = () => {
     return () => clearInterval(interval);
   }, []);
 
+  const socialLinks = [
+    { 
+      Icon: Github, 
+      label: 'GitHub', 
+      url: 'https://github.com/yourusername' 
+    },
+    { 
+      Icon: Linkedin, 
+      label: 'LinkedIn', 
+      url: 'https://www.linkedin.com/in/priyanka-talari-47102626b/' 
+    },
+    { 
+      Icon: Mail, 
+      label: 'Email', 
+      url: 'mailto:your.email@example.com' 
+    }
+  ];
+
   return (
-    <div className="min-h-screen flex items-center justify-center px-4">
-      <div className="text-center z-10 animate-fadeIn max-w-4xl">
-        
-        {/* Floating Icon */}
-        <div className="mb-8 relative inline-block">
-          <div className="w-48 h-48 rounded-full bg-white shadow-2xl p-4 animate-gentleBob">
+    <div className="min-h-screen flex items-center justify-center px-4 py-20 sm:py-0">
+      <div className="text-center z-10 animate-fadeIn max-w-4xl w-full">
+        {/* Profile Fish Image */}
+        <div className="mb-6 sm:mb-8 relative inline-block">
+          <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-full bg-white shadow-2xl p-3 sm:p-4 animate-gentleBob">
             <svg viewBox="0 0 200 200" className="w-full h-full">
               <ellipse cx="100" cy="100" rx="70" ry="50" fill="#E6B941"/>
               <ellipse cx="95" cy="100" rx="60" ry="43" fill="#F4D03F"/>
@@ -39,55 +55,52 @@ const HomePage = () => {
             </svg>
           </div>
         </div>
-
+        
         {/* Name */}
-        <h1 className="text-6xl md:text-8xl font-bold mb-4 text-gray-800 animate-gentleWave">
-          Your Name
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold mb-3 sm:mb-4 text-gray-800 animate-gentleWave px-4">
+          Priyanka Talari
         </h1>
-
+        
         {/* Rotating Titles */}
-        <p className="text-2xl md:text-3xl text-amber-600 mb-6 font-medium">
-          <span className="inline-block animate-titleSlide" key={currentTitle}>
-            {titles[currentTitle]}
-          </span>
-        </p>
-
+        <div className="h-10 sm:h-12 md:h-14 mb-4 sm:mb-6">
+          <p className="text-xl sm:text-2xl md:text-3xl text-amber-600 font-medium">
+            <span className="inline-block animate-titleSlide" key={currentTitle}>
+              {titles[currentTitle]}
+            </span>
+          </p>
+        </div>
+        
         {/* Description */}
-        <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed px-4">
           Swimming through clouds of code, creating digital experiences 
           that soar beyond imagination 🐟☁️
         </p>
-
+        
         {/* Buttons */}
-        <div className="flex flex-wrap justify-center gap-4">
-          <button className="px-8 py-4 bg-amber-400 text-white rounded-full font-semibold hover:bg-amber-500 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+        <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 sm:gap-4 px-4 mb-8 sm:mb-12">
+          <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-amber-400 text-white rounded-full font-semibold hover:bg-amber-500 hover:shadow-xl transform hover:scale-105 transition-all duration-300">
             View My Work
           </button>
-          <button className="px-8 py-4 bg-white text-amber-600 border-2 border-amber-400 rounded-full font-semibold hover:bg-amber-50 transform hover:scale-105 transition-all duration-300 shadow-lg">
+          <button className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-white text-amber-600 border-2 border-amber-400 rounded-full font-semibold hover:bg-amber-50 transform hover:scale-105 transition-all duration-300 shadow-lg">
             Get In Touch
           </button>
         </div>
 
         {/* Social Icons */}
-        <div className="mt-12 flex justify-center gap-6">
-          {[
-            { Icon: Github, label: 'GitHub', url: 'https://github.com/Priyanka-Talari' },
-            { Icon: Linkedin, label: 'LinkedIn', url: 'https://www.linkedin.com/in/priyanka-talari-47102626b/' },
-            { Icon: Mail, label: 'Email', url: 'mailto:priyankatalari16@gmail.com' }
-          ].map(({ Icon, label, url }, i) => (
+        <div className="flex justify-center gap-4 sm:gap-6 px-4">
+          {socialLinks.map((social, index) => (
             <a
-              key={i}
-              href={url}
+              key={index}
+              href={social.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="group p-4 bg-white rounded-full hover:bg-amber-400 transition-all duration-300 cursor-pointer transform hover:scale-110 shadow-lg"
-              title={label}
+              className="group p-3 sm:p-4 bg-white rounded-full hover:bg-amber-400 transition-all duration-300 cursor-pointer transform hover:scale-110 shadow-lg"
+              title={social.label}
             >
-              <Icon size={24} className="text-gray-700 group-hover:text-white transition-colors" />
+              <social.Icon size={20} className="sm:w-6 sm:h-6 text-gray-700 group-hover:text-white transition-colors" />
             </a>
           ))}
         </div>
-
       </div>
     </div>
   );
