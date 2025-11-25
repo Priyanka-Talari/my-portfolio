@@ -9,21 +9,21 @@ const ProjectsPage = () => {
       description: 'Full-stack shopping platform with real-time inventory management and secure payment processing',
       icon: Laptop,
       link: "https://coffeehouse-seven.vercel.app/"
-    }/*,
-    { 
-      title: 'Task Management App', 
-      tech: ['React', 'Firebase', 'Tailwind'],
-      description: 'Collaborative task tracker with team features, real-time updates, and intuitive UI',
+    },
+     { 
+      title: 'Merch-Store Website', 
+      tech: ['HTML/JS/CSS', 'SQL', 'Python'],
+      description: 'Ecommerce shopping with favorite TV-Show Theme',
       icon: Terminal,
-      link: "https://your-task-app-link.com"
+      link: ""
     },
     { 
-      title: 'Weather Dashboard', 
-      tech: ['React', 'API', 'Charts.js'],
-      description: 'Real-time weather data visualization with beautiful charts and forecasts',
+      title: 'Resume-Analyzer', 
+      tech: ['React', 'Typescript', 'Tailwind', 'Puter'],
+      description: 'Analyzing Resume though AI and give smart feedback',
       icon: Code2,
-      link: "https://your-weather-dashboard.com"
-    },
+      link: "https://ai-resume-analyzer-mu-ochre.vercel.app/"
+    },/*
     { 
       title: 'Portfolio Generator', 
       tech: ['React', 'Three.js', 'AI'],
